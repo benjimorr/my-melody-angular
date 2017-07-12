@@ -34,6 +34,7 @@
         /*
         * @function playSong
         * @desc Plays the currentBuzzObject audio file and sets playing to true
+        * @param {Object} song
         */
         var playSong = function(song) {
             currentBuzzObject.play();
@@ -43,6 +44,7 @@
         /*
         * @function stopSong
         * @desc Stops the currentBuzzObject audio file and sets playing to null
+        * @param {Object} song
         */
         var stopSong = function(song) {
             currentBuzzObject.stop();
@@ -52,7 +54,7 @@
         /*
         * @function getSongIndex
         * @desc Returns index of current song in the album's song array
-        * @param {Object}
+        * @param {Object} song
         * @returns {Number}
         */
         var getSongIndex = function(song) {
