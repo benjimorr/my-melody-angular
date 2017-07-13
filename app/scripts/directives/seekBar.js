@@ -40,7 +40,7 @@
                     var max = scope.max;
                     var percent = value / max * 100
                     return percent + "%";
-                }
+                };
 
                 /*
                 * @function fillStyle
@@ -49,7 +49,16 @@
                 */
                 scope.fillStyle = function() {
                     return {width: percentString()};
-                }
+                };
+
+                /*
+                * @function thumbStyle
+                * @desc Returns the position of the seek bar thumb element based on the calculated percentage
+                * @return {Object}
+                */
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
+                };
 
                 /*
                 * @function onClickSeekBar
