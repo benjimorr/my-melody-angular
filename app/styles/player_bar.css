@@ -126,6 +126,10 @@
     width: 25%;
     text-align: right;
 }
+.player-bar .volume .volume-toggle {
+    display: inline-block;
+    width: 25px;
+}
 .player-bar .volume .icon {
     font-size: 1.1rem;
     display: inline-block;
