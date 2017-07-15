@@ -30,7 +30,16 @@
 
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
+                    // check to see if song has ended, and play next one if so
+                    if(currentBuzzObject.getTime() === currentBuzzObject.getDuration()) {
+                        SongPlayer.next();
+                    }
                     SongPlayer.currentTime = currentBuzzObject.getTime();
+                });
+            });
+
+            currentBuzzObject.bind('volumechange', function() {
+                $rootScope.$apply(function() {
                     SongPlayer.volume = currentBuzzObject.getVolume();
                 });
             });
