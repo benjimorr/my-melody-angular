@@ -1,0 +1,68 @@
+.profile-view {
+    padding-bottom: 50px;
+}
+.profile-photo,
+.profile-photo-upload {
+    position: relative;
+    left: 20%;
+    margin-top: 1rem;
+    width: 60%;
+}
+.profile-photo-upload {
+    font-weight: 300;
+}
+.profile-view-header {
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.profile-view-full-name {
+    font-weight: 300;
+    font-size: 2rem;
+}
+.profile-view-details {
+    position: relative;
+    top: 1.5rem;
+    padding: 1rem;
+}
+.profile-view-details .profile-label {
+    display: inline-block;
+    padding: 0.75rem;
+}
+.profile-view-details .profile-label p {
+    font-weight: 300;
+    display: inline-block;
+    width: 6rem;
+}
+.profile-view-first-name,
+.profile-view-last-name,
+.profile-view-hometown {
+    width: 15rem;
+}
+.profile-view-details .profile-view-submit {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 1.5rem;
+}
+.profile-view-details .profile-view-submit .submit-button {
+    text-align: center;
+    font-weight: 300;
+    background-color: white;
+    color: rgb(210, 40, 123);
+    border-radius: 10%;
+}
+.profile-view-details .profile-view-submit .submit-button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(210, 40, 123);
+}
+@media (max-width: 640px) and (min-width: 320px) {
+    .profile-view-details {
+        text-align: center;
+    }
+
+    .profile-view-header {
+        margin-top: 0;
+    }
+}

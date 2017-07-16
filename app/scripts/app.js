@@ -22,11 +22,16 @@
                 url: '/album',
                 controller: 'AlbumCtrl as album',
                 templateUrl: '/templates/album.html'
+            })
+            .state('profile', {
+                url: '/profile',
+                controller: 'ProfileCtrl as profile',
+                templateUrl: '/templates/profile.html'
             });
     }
 
     //defining the angular module with configuration:
     angular
-        .module('blocJams', ['ui.router'])
+        .module('blocJams', ['ui.router', 'ngCookies'])
         .config(config);
 })();
