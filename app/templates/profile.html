@@ -1,28 +1,34 @@
 <main class="profile-view container narrow">
     <section class="clearfix">
         <div class="profile-view-header column full">
-            <h2 class="profile-view-full-name">Ben Morrison</h2>
+            <h2 class="profile-view-full-name">{{ profile.profileUpdater.fullName }}</h2>
         </div>
         <div class="column half">
-            <img src="" class="profile-photo">
-            <input type="file" class="profile-photo-upload" accept="image/*"/>
+            <img src="https://www.gravatar.com/avatar/?d=mm" class="profile-photo">
+            <!-- <input type="file" class="profile-photo-upload" accept="image/*"/> -->
         </div>
         <div class="profile-view-details column half">
-            <label class="profile-label">
-                <p>First Name:</p>
-                <input type="text" class="profile-view-first-name"/>
-            </label>
-            <label class="profile-label">
-                <p>Last Name:</p>
-                <input type="text" class="profile-view-last-name"/>
-            </label>
-            <label class="profile-label">
-                <p>Hometown:</p>
-                <input type="text" class="profile-view-hometown"/>
-            </label>
-            <div class="column full profile-view-submit">
-                <input type="submit" value="Save" class="submit-button"/>
-            </div>
+            <form ng-submit="profile.profileUpdater.saveProfile()">
+                <label class="profile-label">
+                    <p>First Name:</p>
+                    <input type="text" class="profile-view-first-name" ng-model="profile.profileUpdater.firstName" value="{{ profile.profileUpdater.firstName }}"/>
+                </label>
+                <label class="profile-label">
+                    <p>Last Name:</p>
+                    <input type="text" class="profile-view-last-name" ng-model="profile.profileUpdater.lastName" value="{{ profile.profileUpdater.lastName }}"/>
+                </label>
+                <label class="profile-label">
+                    <p>Email:</p>
+                    <input type="email" class="profile-view-email" placeholder="joe@example.com" ng-model="profile.profileUpdater.email" value="{{ profile.profileUpdater.email }}"/>
+                </label>
+                <label class="profile-label">
+                    <p>Hometown:</p>
+                    <input type="text" class="profile-view-hometown" placeholder="Boston, MA" ng-model="profile.profileUpdater.hometown" value="{{ profile.profileUpdater.hometown }}"/>
+                </label>
+                <div class="column full profile-view-submit">
+                    <input type="submit" value="Save" class="submit-button"/>
+                </div>
+            </form>
         </div>
     </section>
 </main>

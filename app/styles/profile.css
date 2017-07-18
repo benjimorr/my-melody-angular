@@ -27,15 +27,16 @@
 }
 .profile-view-details .profile-label {
     display: inline-block;
-    padding: 0.75rem;
 }
 .profile-view-details .profile-label p {
     font-weight: 300;
+    text-align: right;
     display: inline-block;
     width: 6rem;
 }
 .profile-view-first-name,
 .profile-view-last-name,
+.profile-view-email,
 .profile-view-hometown {
     width: 15rem;
 }
