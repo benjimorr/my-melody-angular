@@ -5,7 +5,6 @@
         </div>
         <div class="column half">
             <img src="https://www.gravatar.com/avatar/?d=mm" class="profile-photo">
-            <!-- <input type="file" class="profile-photo-upload" accept="image/*"/> -->
         </div>
         <div class="profile-view-details column half">
             <form ng-submit="profile.profileUpdater.saveProfile()">
@@ -26,7 +25,7 @@
                     <input type="text" class="profile-view-hometown" placeholder="Boston, MA" ng-model="profile.profileUpdater.hometown" value="{{ profile.profileUpdater.hometown }}"/>
                 </label>
                 <div class="column full profile-view-submit">
-                    <input type="submit" value="Save" class="submit-button"/>
+                    <input type="submit" value="Save Changes" class="submit-button"/>
                 </div>
             </form>
         </div>

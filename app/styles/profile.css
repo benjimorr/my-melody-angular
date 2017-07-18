@@ -1,15 +1,11 @@
 .profile-view {
     padding-bottom: 50px;
 }
-.profile-photo,
-.profile-photo-upload {
+.profile-photo {
     position: relative;
     left: 20%;
     margin-top: 1rem;
     width: 60%;
-}
-.profile-photo-upload {
-    font-weight: 300;
 }
 .profile-view-header {
     border-bottom: 2px solid rgba(255,255,255,0.5);
@@ -51,7 +47,6 @@
     font-weight: 300;
     background-color: white;
     color: rgb(210, 40, 123);
-    border-radius: 10%;
 }
 .profile-view-details .profile-view-submit .submit-button:hover {
     cursor: pointer;

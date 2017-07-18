@@ -1,5 +1,5 @@
 (function() {
-    function ProfileUpdater($cookies) {
+    function ProfileUpdater($cookies, $window) {
         var ProfileUpdater = {};
 
         /*
@@ -37,7 +37,14 @@
         * @desc Saves the user's profile data to local cookies
         */
         ProfileUpdater.saveProfile = function() {
-            //functionality here
+            var entireName = ProfileUpdater.firstName + ' ' + ProfileUpdater.lastName;
+            $cookies.put('firstName', ProfileUpdater.firstName);
+            $cookies.put('lastName', ProfileUpdater.lastName);
+            $cookies.put('email', ProfileUpdater.email);
+            $cookies.put('hometown', ProfileUpdater.hometown);
+            $cookies.put('fullName', entireName);
+            alert('Profile Updated Successfully!');
+            $window.location.reload();
         };
 
         return ProfileUpdater;
@@ -45,5 +52,5 @@
 
     angular
         .module('blocJams')
-        .factory('ProfileUpdater', ['$cookies', ProfileUpdater]);
+        .factory('ProfileUpdater', ['$cookies', '$window', ProfileUpdater]);
 })();
