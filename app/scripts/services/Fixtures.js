@@ -51,6 +51,6 @@
     }
 
     angular
-        .module('blocJams')
+        .module('myMelody')
         .factory('Fixtures', Fixtures);
 })();

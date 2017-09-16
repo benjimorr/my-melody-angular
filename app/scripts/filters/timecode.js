@@ -6,12 +6,12 @@
             if(Number.isNaN(seconds)) {
                 return "-:--";
             }
-            
+
             return buzz.toTimer(seconds);
         };
     }
 
     angular
-        .module('blocJams')
+        .module('myMelody')
         .filter('timecode', timecode);
 })();

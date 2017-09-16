@@ -32,6 +32,6 @@
 
     //defining the angular module with configuration:
     angular
-        .module('blocJams', ['ui.router', 'ngCookies'])
+        .module('myMelody', ['ui.router', 'ngCookies'])
         .config(config);
 })();

@@ -121,6 +121,6 @@
     }
 
     angular
-        .module('blocJams')
+        .module('myMelody')
         .directive('seekBar', ['$document', seekBar]);
 })();

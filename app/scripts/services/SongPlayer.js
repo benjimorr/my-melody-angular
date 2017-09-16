@@ -206,6 +206,6 @@
     }
 
     angular
-        .module('blocJams')
+        .module('myMelody')
         .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 })();
